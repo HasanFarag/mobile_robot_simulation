@@ -1,0 +1,24 @@
+
+<launch>
+  <!-- Robot name -->
+  <arg name="robot_name"/>
+<!-- Robot intial pose -->
+  <arg name="initial_pose"/>
+  <!-- Spawn My Robot -->
+  <node name="multi_model_spawner" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen"
+        args="-urdf -param robot_description -model  $(arg robot_name) $(arg initial_pose)"/>
+
+  
+
+  <!-- Send robot states to tf -->
+  <!-- Send fake joint values-->
+  <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher">
+    <param name="use_gui" value="false"/>
+  </node>
+
+  <!-- Send robot states to tf -->
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" respawn="false" output="screen"/>
+
+</launch>
+
+
