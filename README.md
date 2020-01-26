@@ -1,5 +1,11 @@
 # mobile_robot_simulation
 
+killall -9 gzclient
+
+killall -9 gzserver
+
+killall -9 rosmaster
+
   <!-- Node for publishing the transform from the world to the Pick-It frame -->
   
   <node name="static_tf" type="static_transform_publisher"
@@ -7,5 +13,9 @@
       
       
        <node pkg="tf" type="static_transform_publisher" name="$(anon tf)" args="0 0 0 0 0 0 /base /world 30" />
+       
+       
+
+       
 
 
