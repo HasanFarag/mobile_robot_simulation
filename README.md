@@ -1,14 +1,6 @@
 # mobile_robot_simulation
 
-killall -9 gzserver
 
-killall -9 gzclient
-
-killall -9 rosmaster
-
- roslaunch sjtu_drone assault.launch
- 
- rosrun ball_chaser drone_solar.py
 
   <!-- Node for publishing the transform from the world to the Pick-It frame -->
   
