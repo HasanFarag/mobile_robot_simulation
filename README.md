@@ -12,11 +12,14 @@
 
 
 sudo apt-get install python-genmsg
+
 sudo find / -name "libopencv_core.so.3.2*"
-Write /opt/ros/kinetic/lib/x86_64-linux-gnu/ at /etc/ld.so.conf.d/opencv.conf 
+
+Write /opt/ros/kinetic/lib/x86_64-linux-gnu/ at /etc/ld.so.conf.d/opencv.conf
+
 sudo ldconfig -v
        
-       
+sudo apt-get install ros-kinetic-manipulation-msgs        
 
        
 
