@@ -11,7 +11,10 @@
        <node pkg="tf" type="static_transform_publisher" name="$(anon tf)" args="0 0 0 0 0 0 /base /world 30" />
 
 
- sudo apt-get install python-genmsg
+sudo apt-get install python-genmsg
+sudo find / -name "libopencv_core.so.3.2*"
+Write /opt/ros/kinetic/lib/x86_64-linux-gnu/ at /etc/ld.so.conf.d/opencv.conf 
+sudo ldconfig -v
        
        
 
